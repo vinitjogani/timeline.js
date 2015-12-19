@@ -1,13 +1,15 @@
 $.fn.timeline = function(showclass, hideclass){
+    currentObject = this;
     bgcursor = 0;
-    max = parseInt(this.attr("data-height"));
+    max = parseInt(currentObject.attr("data-height"));
     $(window).mousewheel(function(event){
         bgcursor += event.deltaY * -5;
         if(bgcursor <= max && bgcursor >= 0){
-            this.children().each(function(index, el){
+            currentObject.children().each(function(index, el){
                 el = $(el);
-                if(parseInt(el.attr("data-top")) != NaN && parseInt(el.attr("data-bottom")) != NaN)
+                if(!isNaN(parseInt(el.attr("data-top"))) && !isNaN(parseInt(el.attr("data-bottom"))))
                 {
+                    console.log(parseInt(el.attr("data-top"))=== NaN);
                     if(parseInt(el.attr("data-top")) < bgcursor && parseInt(el.attr("data-bottom")) > bgcursor) {
                         el.removeClass(hideclass);
                         el.fadeIn();   
