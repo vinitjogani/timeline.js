@@ -33,3 +33,4 @@ That's it! Now let's move on to the HTML:
 </div>
 ```
 
+Live demo: http://vinitjogani.github.io/timeline.js
