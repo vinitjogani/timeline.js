@@ -1,5 +1,6 @@
 #timeline.js
 > requires mousewheel plugin https://github.com/jquery/jquery-mousewheel/
+>
 > works great with animate.css: https://daneden.github.io/animate.css/
 
 Timeline.js is a simple jQuery plugin to implement a timeline of DOM elements. To add some interesting animation, we will use Animate.css! So let's begin with the JavaScript code:
